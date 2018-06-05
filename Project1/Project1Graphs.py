@@ -32,7 +32,6 @@ def zeros(range):
 def graphUpdate():
     ax.set(xlabel='x', ylabel='inputs', title='0s of sin((PI*x)/inputs)')
     plt.axhline(0, color='black')
-    plt.grid()
     xAxis = np.arange(0.0, xRange,0.01)
     yAxis = graphWaves(xAxis)
     ax.plot(xAxis, yAxis, label = graphLabels(waveLabel))
@@ -40,6 +39,8 @@ def graphUpdate():
     zeros(xRange+1)
 
 # graphs
+plt.grid()
+
 graphUpdate()
 fig.savefig("images/Euler1Graph1.png")
 
@@ -49,6 +50,7 @@ fig.savefig("images/Euler1Graph2.png")
 
 plt.clf()
 fig, ax = plt.subplots()
+plt.grid()
 
 inputs = [5,7]
 graphUpdate()
