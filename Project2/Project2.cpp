@@ -4,16 +4,16 @@
 
 using namespace std;
 
-int length = 0;
+int term = 0;
 int sum = 0;
 int target = 4000000;
 
 int fibonacci(int num);
 
 int main(){
-  while(fibonacci(length) <= target){
-    sum += fibonacci(length);
-    length += 3;
+  while(fibonacci(term) <= target){
+    sum += fibonacci(term);
+    term += 3;
   }
     cout << "The sum of all even valued terms in the Fibonacci sequence between " << target << " and 0 is: " << sum;
 }
