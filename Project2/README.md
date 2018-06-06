@@ -33,9 +33,24 @@ int fibonacci(int num){
 Notice that if the **term** is greater than 1, the output will always be the integer corresponding to the previous term. This is where starting at **term** = 0 becomes useful. Notice that every *third* number from 0 outputs an even integer.
 
 ```
-0      3          6            9             12
-0, 1, *2*, 3, 5, *8*, 13, 21, *34*, 55, 89, *144*
+0     3        6          9           12
+0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 ```
+
+When we put all of this together we get
+
+```
+while(fibonacci(term) <= target){
+  sum += fibonacci(term);
+  term += 3;
+}
+```
+
+which will take every even number of the Fibonacci sequence below the **target** and add it to the **sum** variable.
+
+## Solution
+
+The sum of every even-valued term of the Fibonacci sequence that does not exceed 4,000,000 is 4,613,732.
 
 ## License
 
