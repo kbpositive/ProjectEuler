@@ -18,7 +18,7 @@ int sum = 0;
 int target = 4000000;
 ```
 
-Since we are starting with a 1 and 2 (an odd and an even number), the next number will be odd. This means the following pair will be the sum of an even and an odd number, respectively, which will again produce an odd number. Because the two previous sums are odd the next will have to be even, which will place us back where we started; adding an odd number to an even one. Following this pattern makes it clear that every *third* integer (after the number 2) must be an even one.
+Since we are starting with a 1 and 2 (an odd and an even number), the next number will be odd. This means the following sum will come from an even and an odd number, respectively, which will again produce an odd number. Because the two previous sums are odd the next will have to be even, which will place us back where we started; adding an odd number to an even one. Following this pattern makes it clear that every *third* integer (after the number 2) must be an even one.
 
 1, *2*, 3, 5, *8*, 13, 21, *34*, 55, 89, *144* ...
 
@@ -30,11 +30,11 @@ int fibonacci(int num){
 }
 ```
 
-Notice that if the **term** is greater than 1, the output will always be the integer corresponding to the previous term. This is where starting at **term** = 0 becomes useful. Notice that every *third* number from 0 outputs an even integer.
+Notice that (by checking if the input is less than 2) if the **term** is greater than 1, the output will always be the integer corresponding to the previous term. This is where starting at **term** = 0 becomes useful. Observe how every *third* number from 0 outputs an even integer.
 
 ```
-0     3        6          9           12
-0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+   3        6          9           12
+1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 ```
 
 When we put all of this together we get
@@ -46,7 +46,7 @@ while(fibonacci(term) <= target){
 }
 ```
 
-which will take every even number of the Fibonacci sequence below the **target** and add it to the **sum** variable.
+which will take every even number of the Fibonacci sequence below the **target** variable and add it to the **sum** variable.
 
 ## Solution
 
