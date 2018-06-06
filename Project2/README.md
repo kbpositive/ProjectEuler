@@ -30,7 +30,7 @@ int fibonacci(int num){
 }
 ```
 
-Notice that (by checking if the input is less than 2) if the **term** is greater than 1, the output will always be the integer corresponding to the previous term. This is where starting at **term** = 0 becomes useful. Observe how every *third* number from 0 outputs an even integer.
+Notice that (by checking if the input is less than 2) if the **term** is greater than 1, the output will always be the integer corresponding to the previous **term**. This is where starting at **term** = 0 becomes useful. Observe how every *third* number from 0 outputs an even integer.
 
 ```
    3        6          9           12
