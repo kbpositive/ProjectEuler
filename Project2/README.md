@@ -8,33 +8,33 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 ## Description
 
-A solution to the second problem in the [projecteuler.net](https://projecteuler.net/problem=2) archive, in c++.
+A general solution to the second problem in the [projecteuler.net](https://projecteuler.net/problem=2) archive, in c++. It takes a **target** integer and finds the sum of all even-valued integers in the Fibonacci sequence between it and 0.
+
+First we need to establish the **term** variable that tells us which integer of the Fibonacci sequence to add. Starting at 0 will make things easier down the road as we'll see later. Next we need the **sum** into which we will add each integer. Last we need a **target** that tells us where to stop.
+
+```
+int term = 0;
+int sum = 0;
+int target = 4000000;
+```
+
+Since we are starting with a 1 and 2 (an odd and an even number), the next number will be odd. This means the following pair will be the sum of an even and an odd number, respectively, which will again produce an odd number. Because the two previous sums are odd the next will have to be even, which will place us back where we started; adding an odd number to an even one. Following this pattern makes it clear that every *third* integer (after the number 2) must be an even one.
+
+1, *2*, 3, 5, *8*, 13, 21, *34*, 55, 89, *144* ...
+
+All that's left now is to create a function which will  give the desired output of the Fibonacci sequence for our input **term**. Since each number of the Fibonacci sequence is the sum of the previous two values in the sequence, one option is to use recursion by getting the function to return the sum of itself minus 1 with itself minus 2. Using the conditional (or ternary) operator, we can ensure that the recursion will stop once we reach our lowest desired **term**.
+
+```
+int fibonacci(int num){
+  return num < 2 ? num : fibonacci(num-1)+fibonacci(num-2);
+}
+```
+
+Notice that if the **term** is greater than 1, the output will always be the integer corresponding to the previous term. This is where starting at **term** = 0 becomes useful. Notice that every *third* number from 0 outputs an even integer.
+
+0      3          6            9             12
+0, 1, *2*, 3, 5, *8*, 13, 21, *34*, 55, 89, *144*
 
 ## License
 
 This project is licensed under the MIT License.
-
-Inputs
-
-  length(x)a
-  sum(x)b
-
-Functions/Objects
-
-  fibonacci(a)
-    Inputs
-
-      num(x)a
-
-    Functions/Objects
-
-      num < 2 ? num : fibonacci(num-1) + fibonacci(num-2)
-
-    Outputs
-
-      return
-
-
-Outputs
-
-  sum
