@@ -6,7 +6,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 ## Description
 
-A general solution to the first problem in the [projecteuler.net](https://projecteuler.net/problem=1) archive in c++. It takes any **target** number and finds the sum of all multiples of every entry in the **inputs** vector.
+A general solution to the first problem in the [projecteuler.net](https://projecteuler.net/problem=1) archive in, c++. It takes any **target** number and finds the sum of all multiples of every entry in the **inputs** vector.
 
 The multiples are found by finding the 0s of the function
 ```

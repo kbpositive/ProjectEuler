@@ -8,6 +8,8 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 ## Description
 
+A solution to the second problem in the [projecteuler.net](https://projecteuler.net/problem=2) archive, in c++.
+
 ## License
 
 This project is licensed under the MIT License.
