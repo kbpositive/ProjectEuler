@@ -48,10 +48,6 @@ while(fibonacci(term) <= target){
 
 which will take every even number of the Fibonacci sequence below the **target** variable and add it to the **sum** variable.
 
-## Solution
-
-The sum of every even-valued term of the Fibonacci sequence that does not exceed 4,000,000 is 4,613,732.
-
 ## License
 
 This project is licensed under the MIT License.
