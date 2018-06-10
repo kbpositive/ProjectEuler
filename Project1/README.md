@@ -46,10 +46,6 @@ Multiples of 5, 7, and 9.
 
 It should be noted that the precision will need to increase with the value of the highest input since higher inputs will cause the angle of the slope near the x axis to decrease.
 
-# Solution
-
-The sum of all multiples of either 3 or 5 below 1000 is 233168.
-
 ## License
 
 This project is licensed under the MIT License.
