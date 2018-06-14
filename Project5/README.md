@@ -7,3 +7,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 ## Description
 
 A general solution to the fifth problem in the [projecteuler.net](https://projecteuler.net/problem=5) archive, in c++. It takes any minimum and maximum integer then returns the smallest positive number that is divisible by every number from the minimum and the maximum.
+
+## License
+
+This project is licensed under the MIT License.
