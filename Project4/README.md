@@ -6,8 +6,6 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 ## Description
 
-## Solution
-
 ## License
 
 This project is licensed under the MIT License.
