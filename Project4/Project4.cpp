@@ -1,40 +1,31 @@
 // Project Euler 4
 #include<iostream>
 #include<cmath>
-#include<vector>
 
 using namespace std;
 
-int digits = 4;
-int a = pow(10,digits)-1;
-int b;
-
-bool check(int in);
-
 int main(){
-  while(a > 0){
-    b = a;
-    while(b < pow(10,digits)){
-      if(check(a*b) == true){
-        cout << a*b << " is the largest palindrome to result from the product of two "<< digits << " digit integers: " << a << " and " << b << "\n";
-        break;
-      }else{
-        ++b;
+
+  int digits = 3;
+  int magnitude = pow(10,digits);
+  double half = magnitude -1;
+  double pal = half + half*magnitude;
+
+  while(half >= pow(10,digits-1)){
+  double factorA = magnitude-1;
+  double dummy;
+    while(pal/factorA < magnitude && modf(pal/factorA,&dummy) != 0.0){
+      --factorA;
+    }
+    if(modf(pal/factorA,&dummy) == 0.0 && pal/factorA < magnitude){
+      cout << "The largest palindrome product of two " << digits << "-digit integers is " << pal << " resulting from " << factorA << " and " << dummy << ".\n";
+      break;
+    }else{
+      --half;
+      pal = half*magnitude;
+      for(int flip = 0; flip < digits; ++flip){
+        pal += ((int)(half/pow(10,flip))%10)*pow(10,digits-1-flip);
       }
     }
-    --a;
   }
-}
-
-bool check(int in){
-  bool pal = false;
-  for(int count = 0; count < to_string(in).length()/2; ++count){
-    if(to_string(in)[count] == to_string(in)[to_string(in).length()-count-1]){
-      pal = true;
-    }else{
-      pal = false;
-      break;
-    }
-  }
-  return pal;
 }
