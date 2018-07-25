@@ -22,7 +22,7 @@ Since we are starting with a 1 and 2 (an odd and an even number), the next numbe
 
 1, **2**, 3, 5, **8**, 13, 21, **34**, 55, 89, **144** ...
 
-All that's left now is to create a function which will  give the desired output of the Fibonacci sequence for our input **term**. Since each number of the Fibonacci sequence is the sum of the previous two values in the sequence, one option is to use recursion by getting the function to return the sum of itself minus 1 with itself minus 2. Using the conditional (or ternary) operator, we can ensure that the recursion will stop once we reach our lowest desired **term**.
+All that's left now is to create a function which will  give the desired output of the Fibonacci sequence for our input **term**. Since each number of the Fibonacci sequence is the sum of the previous two values in the sequence, one option is to use [recursion](http://www.cplusplus.com/articles/D2N36Up4/) by getting the function to return the sum of itself minus 1 with itself minus 2. Using the [conditional (or ternary) operator](http://www.cplusplus.com/articles/1AUq5Di1/), we can ensure that the recursion will stop once we reach our lowest desired **term**.
 
 ```
 int fibonacci(int num){
