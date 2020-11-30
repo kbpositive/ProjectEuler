@@ -3,3 +3,30 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+from typing import Dict
+
+def fib(n: int, memo: Dict[int, int]) -> int:
+    if n in memo:
+        return memo[n]
+    if n == 1:
+        res = 1
+    elif n == 2:
+        res = 2
+    elif n > 2:
+        res =  fib(n-1, memo) + fib(n-2, memo)
+    memo[n] = res
+    return res
+
+def even_fib_under(max: int) -> int:
+    cache = {}
+    sum = 0
+    count = 1
+    current_fib = 0
+    while current_fib < max:
+        current_fib = fib(count, cache)
+        count += 1
+        if current_fib%2 == 0:
+            sum += current_fib
+    return sum
+
+print(even_fib_under(4000000))
