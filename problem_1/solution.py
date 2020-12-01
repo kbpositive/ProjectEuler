@@ -2,13 +2,13 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-import math
+from math import ceil
 from typing import List
 
 def sum_of_muls_of_x_below_y(x: List[int], y: int) -> int:
     multiples = []
     for num in x:
-        multiples += [multiple*num for multiple in range(1,math.ceil(y/num))]
+        multiples += [multiple*num for multiple in range(1,ceil(y/num))]
     return sum(set(multiples))
 
 
