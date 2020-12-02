@@ -31,7 +31,7 @@ def primeFactors(num: str) -> List[int]:
         remainderExists = listDivide(listNum, factor)[1]
         if remainderExists is not True:
             primes.append(factor)
-            while remainderExists is not True:
+            while listDivide(listNum, factor)[1] is not True:
                 listNum = listDivide(listNum, factor)[0]
         factor += 1
     primes.append(int(''.join([str(digit) for digit in listNum])))
